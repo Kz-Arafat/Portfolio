@@ -1,0 +1,654 @@
+
+        /* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    min-height: 75px;
+    background: #0f172a;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.Logo h1 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav div {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+
+    color: #cbd5e1;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Underline animation */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #38bdf8;
+
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+main > section:first-child {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 70px 50px;
+
+    margin-top: 30px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #0284c7
+    );
+
+    color: white;
+
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.25);
+}
+
+main > section:first-child h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+main > section:first-child h1::first-line {
+    color: #bae6fd;
+}
+
+main > section:first-child img {
+    width: 320px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+main > section:not(:first-child) {
+    background: white;
+
+    margin-top: 40px;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+main section h2 {
+    font-size: 30px;
+
+    color: #0f172a;
+
+    margin-bottom: 20px;
+}
+
+main section p {
+    color: #475569;
+    font-size: 17px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+main > section:nth-child(2) {
+    border-left: 5px solid #0284c7;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+main > section:nth-child(3) ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    list-style: none;
+
+    margin-bottom: 40px;
+}
+
+main > section:nth-child(3) li {
+    background: #e0f2fe;
+
+    color: #0369a1;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    border: 1px solid #bae6fd;
+
+    transition: 0.3s;
+}
+
+main > section:nth-child(3) li:hover {
+    background: #0284c7;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+article {
+    margin-top: 30px;
+}
+
+article h2 {
+    margin-bottom: 20px;
+}
+
+article > div {
+    background: #f8fafc;
+
+    border-left: 5px solid #0284c7;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+article > div:hover {
+    transform: translateX(8px);
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+article h3 {
+    color: #0f172a;
+
+    margin-bottom: 8px;
+
+    font-size: 21px;
+}
+
+article p {
+    margin-bottom: 8px;
+}
+
+article a {
+    color: #0284c7;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+main > h2 {
+    margin-top: 50px;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    color: #0f172a;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+thead {
+    background: #0f172a;
+
+    color: white;
+}
+
+th,
+td {
+    padding: 16px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form {
+    background: white;
+
+    margin-top: 50px;
+
+    margin-bottom: 60px;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+form h2 {
+    margin-bottom: 25px;
+
+    color: #0f172a;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #334155;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0284c7;
+
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background: #0284c7;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0369a1;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(2, 132, 199, 0.3);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f172a;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    padding: 30px 10%;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 10px 4%;
+    }
+
+    nav div {
+        gap: 18px;
+    }
+
+    main > section:first-child {
+        padding: 50px 35px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 40px;
+    }
+
+    main > section:first-child img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    nav div {
+        gap: 20px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    main > section:first-child {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 50px 20px;
+
+        min-height: auto;
+    }
+
+    main > section:first-child h1 {
+        font-size: 36px;
+    }
+
+    main > section:first-child img {
+        width: 230px;
+        height: 230px;
+    }
+
+    main > section:not(:first-child) {
+        padding: 25px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .Logo h1 {
+        font-size: 20px;
+    }
+
+    .Logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav div {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 30px;
+    }
+
+    main > section:first-child img {
+        width: 190px;
+        height: 190px;
+    }
+
+    main > section:not(:first-child) {
+        padding: 20px;
+    }
+
+    main section h2 {
+        font-size: 25px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+   
